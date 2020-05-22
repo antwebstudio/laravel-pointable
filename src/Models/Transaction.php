@@ -35,6 +35,7 @@ class Transaction extends Model
          where('pointable_id', $pointable->id)
          ->where('pointable_type', $pointable->getMorphClass())
          ->orderBy('created_at', 'desc')
+         ->orderBy('id', 'desc')
          ->pluck('current')->first();
 
          if (!$currentPoint) {
