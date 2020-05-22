@@ -42,6 +42,6 @@ trait Pointable
      */
     public function addPoints($amount, $message, $data = null)
     {
-        return (new Transaction())->addTransaction($this, $amount, $message, $data = null);
+        return (new Transaction())->addTransaction($this, $amount, $message, $data);
     }
 }
